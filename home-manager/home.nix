@@ -1,6 +1,12 @@
 { config, pkgs, ... }:
 
 {
+
+  imports = [
+    ./hyprland/default.nix
+  ];
+
+
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   home.username = "blaz";
@@ -38,8 +44,10 @@
  
  
   home.packages = with pkgs; [
-
-   
+    nerd-fonts.jetbrains-mono
+    nerd-fonts.hack
+    font-awesome
+    noto-fonts-emoji
   ];
 
   
