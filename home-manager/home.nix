@@ -43,12 +43,12 @@
  
  
  
-  home.packages = with pkgs; [
-    nerd-fonts.jetbrains-mono
-    nerd-fonts.hack
-    font-awesome
-    noto-fonts-emoji
-  ];
+  # home.packages = with pkgs; [
+  #   nerd-fonts.jetbrains-mono
+  #   nerd-fonts.hack
+  #   font-awesome
+  #   noto-fonts-emoji
+  # ];
 
   
   home.file = {
