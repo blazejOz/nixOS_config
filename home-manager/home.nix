@@ -14,7 +14,8 @@
       extensions = with pkgs.vscode-extensions; [
         ms-python.python
         ms-vscode.cpptools
-	vscodevim.vim
+	      vscodevim.vim
+        jeff-hykin.better-nix-syntax
       ];
     };
   };
