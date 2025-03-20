@@ -4,6 +4,7 @@
 
   imports = [
     ./hyprland/default.nix
+    ./neovim/default.nix
   ];
 
 
@@ -12,7 +13,6 @@
   home.username = "blaz";
   home.homeDirectory = "/home/blaz";
 
-  nixpkgs.config.allowUnfree = true;
 
   programs.vscode = {
     enable = true;
@@ -43,26 +43,11 @@
  
  
  
-  # home.packages = with pkgs; [
-  #   nerd-fonts.jetbrains-mono
-  #   nerd-fonts.hack
-  #   font-awesome
-  #   noto-fonts-emoji
-  # ];
+  home.packages = with pkgs; [
+   
+  ];
 
-  
-  home.file = {
-    # # Building this configuration will create a copy of 'dotfiles/screenrc' in
-    # # the Nix store. Activating the configuration will then make '~/.screenrc' a
-    # # symlink to the Nix store copy.
-    # ".screenrc".source = dotfiles/screenrc;
 
-    # # You can also set the file content immediately.
-    # ".gradle/gradle.properties".text = ''
-    #   org.gradle.console=verbose
-    #   org.gradle.daemon.idletimeout=3600000
-    # '';
-  };
 
   # Home Manager can also manage your environment variables through
   # 'home.sessionVariables'. These will be explicitly sourced when using a
@@ -86,5 +71,6 @@
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
+  nixpkgs.config.allowUnfree = true;
   home.stateVersion = "24.11"; 
 }
