@@ -6,16 +6,17 @@
         vimAlias = true;
 
         plugins = with pkgs.vimPlugins; [
-            nvim-treesitter
-            #catppuccin-nvim
-        ];
+            (nvim-treesitter.withPlugins (p: [
+                p.c p.cpp p.python p.lua p.nix p.css p.json
+            ]))
+            lualine-nvim
+            nvim-web-devicons
 
-        # extraPackages = with pkgs; [
-        
-        # ];
-  
+            #Theme
+            tokyonight-nvim
+        ];
     };
 
-    xdg.configFile."nvim/init.lua".source = ./nvim/init.lua;
-
+    # Symlink the entire Neovim configuration folder
+    xdg.configFile."nvim".source = ./nvim;
 }
