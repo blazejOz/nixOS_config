@@ -59,15 +59,8 @@
       "format-plugged": "{capacity}% ",
       "format-alt": "{time} {icon}",
       "format-icons": ["", "", "", "", ""],
-      "on-click": "~/.config/waybar/toggle-charge.sh"
+      "on-click": "kitty ~/.config/waybar/toggle-charge.sh"
     },
-  
-    // "custom/charge-toggle": {
-    //   "format": "⚡",
-    //   "tooltip": "Toggle Battery Conservation Mode (60% / 100%)",
-    //   "on-click": "~/.config/waybar/toggle-charge.sh",
-    //   "interval": 0
-    // },
   
     "network": {
       "on-click": "kitty nmtui",

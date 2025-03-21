@@ -18,6 +18,7 @@
     hyprpolkitagent
     mako
     libnotify
+    bluetui
   ];  
 
     gtk.cursorTheme = {
