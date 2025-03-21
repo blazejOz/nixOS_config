@@ -9,8 +9,22 @@
     font-awesome
     noto-fonts-emoji
 
+    #cursor theme
+    adwaita-icon-theme
+
     waybar
   ];  
+
+    gtk.cursorTheme = {
+    name = "Adwaita";
+    size = 24;
+    package = pkgs.adwaita-icon-theme;
+  };
+
+  home.sessionVariables = {
+    XCURSOR_THEME = "Adwaita";
+    XCURSOR_SIZE = "24";
+  };
 
 
   #  xdg.configFile = {

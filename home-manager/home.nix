@@ -5,6 +5,7 @@
   imports = [
     ./hyprland/default.nix
     ./neovim/default.nix
+    ./bash/bash.nix
   ];
 
 
@@ -44,7 +45,8 @@
  
  
   home.packages = with pkgs; [
-   
+	  drawio
+    mysql-workbench
   ];
 
 
