@@ -11,8 +11,13 @@
 
     #cursor theme
     adwaita-icon-theme
-
+    
+    #Hyprland
     waybar
+    hyprpaper
+    hyprpolkitagent
+    mako
+    libnotify
   ];  
 
     gtk.cursorTheme = {
@@ -26,16 +31,9 @@
     XCURSOR_SIZE = "24";
   };
 
+  xdg.configFile."hypr".source = ./hypr;
+  xdg.configFile."waybar".source = ./waybar;
 
-  #  xdg.configFile = {
-  #         ".config/hypr/hyprland.conf".source = ./hypr/hyprland.conf;
-  #         ".config/waybar/config.jsonc".source = ./waybar/config.jsonc;
-  #         ".config/waybar/style.css".source = ./waybar/style.css;
-  #       };
-
-  xdg.configFile."hypr/hyprland.conf".source = ./hypr/hyprland.conf;
-  xdg.configFile."waybar/config.jsonc".source = ./waybar/config.jsonc;
-  xdg.configFile."waybar/style.css".source = ./waybar/style.css;
 
 
 
