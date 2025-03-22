@@ -85,8 +85,16 @@
     kitty
     pulsemixer
     python3
+    pgadmin4
+    postgresql
   ];
 
+  services.postgresql.enable = true;
+  services.postgresql.package = pkgs.postgresql_15;  # or another version you want
+  services.postgresql.initialScript = pkgs.writeText "init.sql" ''
+  CREATE USER blaz WITH SUPERUSER PASSWORD 'yourpassword';
+  CREATE DATABASE testdb OWNER blaz;
+'';
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
