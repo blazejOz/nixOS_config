@@ -17,6 +17,8 @@
             telescope-nvim #fuzzy finder
             plenary-nvim  # Required by Telescope
 
+            comment-nvim # easy comment
+
             #Theme
             tokyonight-nvim
         ];

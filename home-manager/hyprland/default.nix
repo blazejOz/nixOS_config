@@ -19,6 +19,9 @@
     mako
     libnotify
     bluetui
+    grim
+    slurp
+    wl-clipboard
   ];  
 
     gtk.cursorTheme = {

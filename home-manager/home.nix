@@ -41,8 +41,9 @@
  
  
   home.packages = with pkgs; [
-	  drawio
-    mysql-workbench
+	 drawio
+	 mysql-workbench
+  	mariadb	
   ];
 
 

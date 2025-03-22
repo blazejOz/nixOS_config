@@ -2,6 +2,8 @@
 vim.g.mapleader = " "
 
 vim.keymap.set("n", "<leader>t", ":split | terminal<CR>", { noremap = true, silent = true })
+vim.keymap.set("t", "<Esc>", [[<C-\><C-n>]], { noremap = true }) -- Escape to normal mode in terminal
+
 
 --buffer key map--
 vim.keymap.set("n", "<Tab>", ":bnext<CR>", { noremap = true, silent = true })
@@ -17,6 +19,9 @@ vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>", { noremap = true, silent
 
 -- Telescope setup
 require("telescope").setup()
+
+--coment--
+require("Comment").setup()
 
 -- Keybindings
 vim.keymap.set("n", "<leader>ff", ":Telescope find_files<CR>", { noremap = true, silent = true })
