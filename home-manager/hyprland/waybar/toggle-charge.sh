@@ -15,3 +15,5 @@ else
   echo 1 | sudo /usr/bin/tee "$FILE" > /dev/null
   notify-send "Battery Mode" "Charging limited to 60%"
 fi
+
+
