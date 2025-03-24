@@ -4,7 +4,8 @@
 {
   imports =
     [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
+	./hardware-configuration.nix
+	./secret.nix
     ];
 
   # Bootloader.
