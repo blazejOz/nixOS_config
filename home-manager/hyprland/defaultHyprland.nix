@@ -36,7 +36,17 @@
   };
 
   xdg.configFile."hypr".source = ./hypr;
-  xdg.configFile."waybar".source = ./waybar;
+
+
+  ########WAYBAR
+  xdg.configFile."waybar/config.jsonc".source = ./waybar/config.jsonc;
+  xdg.configFile."waybar/style.css".source = ./waybar/style.css;
+  xdg.configFile."waybar/toggle-charge.sh" = {
+    source = ./waybar/toggle-charge.sh;
+    executable = true;
+};
+
+
 
 
   programs.kitty = {

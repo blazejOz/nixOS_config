@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 FILE="/sys/bus/platform/drivers/ideapad_acpi/VPC2004:00/conservation_mode"
 
@@ -8,12 +8,9 @@ if [ ! -f "$FILE" ]; then
 fi
 
 MODE=$(cat "$FILE")
+notify-send "Battery Toggle" "Current mode: $MODE"
 if [ "$MODE" = "1" ]; then
-  echo 0 | sudo /usr/bin/tee "$FILE" > /dev/null
-  notify-send "Battery Mode" "Charging to 100%"
+  sudo sh -c "echo 0 > '$FILE'" && notify-send "Battery Mode" "Charging to 100%" || notify-send "Battery Mode" "Failed to switch to 100%"
 else
-  echo 1 | sudo /usr/bin/tee "$FILE" > /dev/null
-  notify-send "Battery Mode" "Charging limited to 60%"
+  sudo sh -c "echo 1 > '$FILE'" && notify-send "Battery Mode" "Charging limited to 60%" || notify-send "Battery Mode" "Failed to switch to conservation mode"
 fi
-
-
