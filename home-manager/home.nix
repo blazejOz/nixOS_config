@@ -3,8 +3,8 @@
 {
 
   imports = [
-    ./hyprland/default.nix
-    ./neovim/default.nix
+    ./hyprland/defaultHyprland.nix
+    ./neovim/defaultNvim.nix
     ./bash/bash.nix
   ];
 
@@ -30,38 +30,13 @@
     userEmail = "blazej.ozog@gmail.com";
   };
   
-  programs.kitty = {
-  enable = true;
-  settings = {
-    confirm_os_window_close = "0";
-    };
-  };
 
- 
  
  
   home.packages = with pkgs; [
 	   
   ];
 
-
-
-  # Home Manager can also manage your environment variables through
-  # 'home.sessionVariables'. These will be explicitly sourced when using a
-  # shell provided by Home Manager. If you don't want to manage your shell
-  # through Home Manager then you have to manually source 'hm-session-vars.sh'
-  # located at either
-  #
-  #  ~/.nix-profile/etc/profile.d/hm-session-vars.sh
-  #
-  # or
-  #
-  #  ~/.local/state/nix/profiles/profile/etc/profile.d/hm-session-vars.sh
-  #
-  # or
-  #
-  #  /etc/profiles/per-user/blaz/etc/profile.d/hm-session-vars.sh
-  #
   home.sessionVariables = {
     # EDITOR = "emacs";
   };
