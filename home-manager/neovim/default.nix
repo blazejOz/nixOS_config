@@ -19,6 +19,11 @@
 
             comment-nvim # easy comment
 
+            #nvim-autopairs #auto pairing brtackets 
+
+            #LSP 
+            nvim-lspconfig
+
             #Theme
             tokyonight-nvim
         ];
@@ -26,6 +31,12 @@
            extraPackages = with pkgs; [
                 ripgrep  # Enables :Telescope live_grep
                 fd       # Faster file finding
+
+                #LSP Servers
+                lua-language-server
+                pyright
+                clang-tools  # for clangd
+                nil  # Nix language serverv
             ];
     };
 
