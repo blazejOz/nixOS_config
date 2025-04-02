@@ -34,7 +34,8 @@
  
  
   home.packages = with pkgs; [
-	   
+	vlc
+	qbittorrent 
   ];
 
   home.sessionVariables = {

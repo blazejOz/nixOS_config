@@ -20,8 +20,7 @@
       "bluetooth",
       "network",
       "backlight",
-      "battery",
-      "custom/charge-toggle"
+      "battery"
     ],
   
     // Modules configuration
@@ -80,7 +79,6 @@
         "headset": "",
         "phone": "",
         "portable": "",
-        "car": "",
         "default": ["", "", ""]
       },
       "on-click": "kitty pulsemixer"
