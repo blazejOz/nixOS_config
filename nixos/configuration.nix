@@ -85,10 +85,13 @@
     firefox
     kitty
     pulsemixer
-    python3
+    (python3.withPackages (ps: with ps; [
+      requests
+    ]))
     pgadmin4
     postgresql
     brightnessctl
+    gnupg
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
